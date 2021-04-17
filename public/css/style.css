@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Exo 2";
+  src: url("../fonts/Exo2.0-Thin.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/Pattern.png);
+  font-family: 'Exo 2';
+  color: white;
+}
+
+.btn {
+  color: #22A7E9;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.bdushed {
+  border-bottom: 1px dashed #1698D9;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.question {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 24px;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  margin: 20px;
+}
+
+.card__selected > .card__body {
+  border: 4px solid #D91667;
+}
+
+.card__disabled {
+  cursor: auto;
+}
+
+.card__disabled > .card__body {
+  border: 4px solid #b3b3b3;
+  color: #b3b3b3;
+}
+
+.card__disabled .card__oval {
+  background: #b3b3b3;
+}
+
+.card__disabled .card__footer {
+  color: #FFFF66;
+}
+
+.card__body {
+  background: white;
+  border: 4px solid #2EA8E6;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.card__info {
+  margin-left: 41px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.card__text {
+  font-family: Trebuchet MS;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666;
+}
+
+.card__text2 {
+  font-family: Trebuchet MS;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.card__name {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000;
+  font-family: Trebuchet MS;
+}
+
+.card__component {
+  font-family: Trebuchet MS;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+.card__oval {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #2EA8E6;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 21px;
+  line-height: 35px;
+  font-family: Trebuchet MS;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
+.card__selected .card__oval {
+  background: #D91667;
+}
+
+.card__weight {
+  font-size: 42px;
+  color: #fff;
+}
+
+.card__unit {
+  color: #fff;
+  font-size: 21px;
+  line-height: 22px;
+}
+
+.card__cat {
+  margin-bottom: -12px;
+  margin-top: 30px;
+}
+
+.card__footer {
+  font-family: Trebuchet MS;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.disabledBackgr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  opacity: 0.45;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 601px) {
+  #app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
